@@ -1,0 +1,13 @@
+<persistence xmlns="http://java.sun.com/xml/ns/persistence" version="1.0">
+    <persistence-unit name="WeatherService" transaction-type="RESOURCE_LOCAL">
+        <class>cmpe473.project3.weather.entity.Weather</class>
+        <validation-mode>NONE</validation-mode>
+		<properties>
+            <property name="javax.persistence.jdbc.driver" value="org.apache.derby.jdbc.ClientDriver"></property>
+            <property name="javax.persistence.jdbc.url" value="jdbc:derby://localhost:1527/weather_db;create=true"></property>
+            <property name="javax.persistence.jdbc.user" value="APP"></property>
+            <property name="javax.persistence.jdbc.password" value="APP"></property>
+            <property name="eclipselink.ddl-generation" value="create-tables"/>
+        </properties>
+    </persistence-unit>
+</persistence>
