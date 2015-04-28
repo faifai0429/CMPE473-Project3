@@ -13,7 +13,7 @@ public class Weather
 	private int id;
 	private String location;
 	private String dateTime;
-	private float temperature_c;
+	private double temperature_c;
 	
 	public int getId() {
 		return this.id;
@@ -36,10 +36,10 @@ public class Weather
 	public void setDateTime(String dateTime) {
 		this.dateTime = dateTime;
 	}
-	public float getTemperature() {
+	public double getTemperature() {
 		return this.temperature_c;
 	}
-	public void setTemperature(float temperature_c) {
+	public void setTemperature(double temperature_c) {
 		this.temperature_c = temperature_c;
 	}
 }

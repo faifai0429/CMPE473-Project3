@@ -14,6 +14,7 @@ public class WeatherMain
 		EntityManagerFactory emf = Persistence.createEntityManagerFactory("WeatherService");
 		EntityManager em = emf.createEntityManager();
 		
+		// New entity 
 		Weather weather = new Weather();
 		weather.setLocation("United State");
 		weather.setDateTime("2015-02/03 00:00:00");
@@ -21,11 +22,29 @@ public class WeatherMain
 		
 		em.getTransaction().begin();
 		em.persist(weather);
+		em.flush();
+		System.out.println(weather.getId());
 		em.getTransaction().commit();
 		
+		// Update entity
+//		Weather weather = em.find(Weather.class, 1);	//get entity by id;
+//		em.getTransaction().begin();
+//		/* Do the changes here */
+//		weather.setTemperature(25.0);
+//		/* Do the changes here */
+//		em.getTransaction().commit();
+		 
+		// Remove entity
+//		Weather weather = em.find(Weather.class, 1);	//get entity by id;
+//		em.getTransaction().begin();
+//		em.remove(weather);	//remove the entity
+//		em.getTransaction().commit();
+		 
+		// query entity
 //		TypedQuery<Weather> query = em.createQuery("SELECT w FROM Weather w", Weather.class);
 //		for(Weather result : query.getResultList()) {
 //			System.out.println(result.getId());
 //		};
+		
 	}
 }
